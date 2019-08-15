@@ -1,1 +1,36 @@
+#项目根路径,端口配置
+server:
+  servlet:
+    context-path: "/mr"
+  port: 6080
+#数据源配置
+spring:
+  datasource:
+    url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=Shiro
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: sa
+    password: 123456nc
+    #hikari连接池
+    hikari:
+      #最小空闲连接数
+      minimum-idle: 5
+      #连接池最大数
+      maximum-pool-size:15
+      #允许连接在连接池最大空闲时间
+      idle-timeout: 300000
+      #客户端等待连接池最大等待时间
+      connection-timeout: 20000
+      #连接池关闭后最长生命周期
+      max-lifetime: 1200000
+      #连接默认提交行为
+      auto-commit: true
+      #连接为只读
+      read-only: true
+#mybatis mapper 文件路径
+mybatis:
+  mapper-locations: classpath:mapper/*/*.xml
+
+
+
+
 
