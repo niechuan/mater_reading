@@ -27,6 +27,11 @@
 			<scope>test</scope>
 		</dependency>
 		<!--SqlServer 驱动 jar-->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
