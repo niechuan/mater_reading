@@ -6,7 +6,7 @@ server:
 #数据源配置
 spring:
   datasource:
-    url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=Shiro
+    url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=WaterDB_YBTQ
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     username: sa
     password: 123456nc
