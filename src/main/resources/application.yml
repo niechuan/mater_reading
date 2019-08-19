@@ -15,7 +15,7 @@ spring:
       #最小空闲连接数
       minimum-idle: 5
       #连接池最大数
-      maximum-pool-size:15
+      maximum-pool-size: 15
       #允许连接在连接池最大空闲时间
       idle-timeout: 300000
       #客户端等待连接池最大等待时间

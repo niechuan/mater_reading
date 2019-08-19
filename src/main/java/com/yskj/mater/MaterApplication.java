@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement
-@MapperScan(value = "com.yskj.mater.*.*.dao")
+@MapperScan(value = "com.yskj.mater.*.dao")
 public class MaterApplication {
 
 	public static void main(String[] args) {
