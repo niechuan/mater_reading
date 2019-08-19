@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yskj.mater.price.dao.PriceMapper">
+  <resultMap id="map" type="com.yskj.mater.price.entity.Price">
+    <id column="PrjID" jdbcType="INTEGER" property="prjid" />
+    <result column="PrjName" jdbcType="VARCHAR" property="prjname" />
+    <result column="BasicPrice" jdbcType="DECIMAL" property="basicprice" />
+    <result column="Add1Price" jdbcType="DECIMAL" property="add1price" />
+    <result column="Add2Price" jdbcType="DECIMAL" property="add2price" />
+    <result column="Add3Price" jdbcType="DECIMAL" property="add3price" />
+    <result column="Add4Price" jdbcType="DECIMAL" property="add4price" />
+    <result column="Add5Price" jdbcType="DECIMAL" property="add5price" />
+    <result column="TypeID" jdbcType="INTEGER" property="typeid" />
+    <result column="WaterIncrement" jdbcType="INTEGER" property="waterincrement" />
+    <result column="WaterJH1" jdbcType="INTEGER" property="waterjh1" />
+    <result column="Price2" jdbcType="DECIMAL" property="price2" />
+    <result column="WaterJH2" jdbcType="INTEGER" property="waterjh2" />
+    <result column="Price3" jdbcType="DECIMAL" property="price3" />
+    <result column="Price0" jdbcType="DECIMAL" property="price0" />
+    <result column="ShortName" jdbcType="VARCHAR" property="shortname" />
+    <result column="PlanMode" jdbcType="INTEGER" property="planmode" />
+    <result column="Period" jdbcType="INTEGER" property="period" />
+    <result column="ModificationTime" jdbcType="TIMESTAMP" property="modificationtime" />
+    <result column="Remarks" jdbcType="VARCHAR" property="remarks" />
+  </resultMap>
+  <sql id="columns">
+    PrjID, PrjName, BasicPrice, Add1Price, Add2Price, Add3Price, Add4Price, Add5Price, 
+    TypeID, WaterIncrement, WaterJH1, Price2, WaterJH2, Price3, Price0, ShortName, PlanMode, 
+    Period, ModificationTime, Remarks
+  </sql>
+  <!--通过主键查询-->
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="map">
+    select 
+    <include refid="columns" />
+    from Price
+    where PrjID = #{prjid,jdbcType=INTEGER}
+  </select>
+  <!--通过主键删除-->
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from Price
+    where PrjID = #{prjid,jdbcType=INTEGER}
+  </delete>
+  <!--插入-->
+  <insert id="insert" parameterType="com.yskj.mater.price.entity.Price">
+    insert into Price (PrjID, PrjName, BasicPrice, 
+      Add1Price, Add2Price, Add3Price, 
+      Add4Price, Add5Price, TypeID, 
+      WaterIncrement, WaterJH1, Price2, 
+      WaterJH2, Price3, Price0, 
+      ShortName, PlanMode, Period, 
+      ModificationTime, Remarks)
+    values (#{prjid,jdbcType=INTEGER}, #{prjname,jdbcType=VARCHAR}, #{basicprice,jdbcType=DECIMAL}, 
+      #{add1price,jdbcType=DECIMAL}, #{add2price,jdbcType=DECIMAL}, #{add3price,jdbcType=DECIMAL}, 
+      #{add4price,jdbcType=DECIMAL}, #{add5price,jdbcType=DECIMAL}, #{typeid,jdbcType=INTEGER}, 
+      #{waterincrement,jdbcType=INTEGER}, #{waterjh1,jdbcType=INTEGER}, #{price2,jdbcType=DECIMAL}, 
+      #{waterjh2,jdbcType=INTEGER}, #{price3,jdbcType=DECIMAL}, #{price0,jdbcType=DECIMAL}, 
+      #{shortname,jdbcType=VARCHAR}, #{planmode,jdbcType=INTEGER}, #{period,jdbcType=INTEGER}, 
+      #{modificationtime,jdbcType=TIMESTAMP}, #{remarks,jdbcType=VARCHAR})
+  </insert>
+  <!--通过主键修改-->
+  <update id="updateByPrimaryKey" parameterType="com.yskj.mater.price.entity.Price">
+    update Price
+    set PrjName = #{prjname,jdbcType=VARCHAR},
+      BasicPrice = #{basicprice,jdbcType=DECIMAL},
+      Add1Price = #{add1price,jdbcType=DECIMAL},
+      Add2Price = #{add2price,jdbcType=DECIMAL},
+      Add3Price = #{add3price,jdbcType=DECIMAL},
+      Add4Price = #{add4price,jdbcType=DECIMAL},
+      Add5Price = #{add5price,jdbcType=DECIMAL},
+      TypeID = #{typeid,jdbcType=INTEGER},
+      WaterIncrement = #{waterincrement,jdbcType=INTEGER},
+      WaterJH1 = #{waterjh1,jdbcType=INTEGER},
+      Price2 = #{price2,jdbcType=DECIMAL},
+      WaterJH2 = #{waterjh2,jdbcType=INTEGER},
+      Price3 = #{price3,jdbcType=DECIMAL},
+      Price0 = #{price0,jdbcType=DECIMAL},
+      ShortName = #{shortname,jdbcType=VARCHAR},
+      PlanMode = #{planmode,jdbcType=INTEGER},
+      Period = #{period,jdbcType=INTEGER},
+      ModificationTime = #{modificationtime,jdbcType=TIMESTAMP},
+      Remarks = #{remarks,jdbcType=VARCHAR}
+    where PrjID = #{prjid,jdbcType=INTEGER}
+  </update>
+</mapper>

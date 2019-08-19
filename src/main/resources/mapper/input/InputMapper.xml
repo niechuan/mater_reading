@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yskj.mater.input.dao.InputMapper">
+  <resultMap id="map" type="com.yskj.mater.input.entity.Input">
+    <id column="UserID" jdbcType="INTEGER" property="userid" />
+    <result column="cYear" jdbcType="INTEGER" property="cyear" />
+    <result column="cMonth" jdbcType="INTEGER" property="cmonth" />
+    <result column="Frequency" jdbcType="INTEGER" property="frequency" />
+    <result column="Population" jdbcType="INTEGER" property="population" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="UserAddr" jdbcType="VARCHAR" property="useraddr" />
+    <result column="PrjID1" jdbcType="TINYINT" property="prjid1" />
+    <result column="PrjID2" jdbcType="TINYINT" property="prjid2" />
+    <result column="PrjID3" jdbcType="TINYINT" property="prjid3" />
+    <result column="PrjID4" jdbcType="TINYINT" property="prjid4" />
+    <result column="PrjID5" jdbcType="TINYINT" property="prjid5" />
+    <result column="PrjLv" jdbcType="VARCHAR" property="prjlv" />
+    <result column="add1flag" jdbcType="TINYINT" property="add1flag" />
+    <result column="add2flag" jdbcType="TINYINT" property="add2flag" />
+    <result column="add3flag" jdbcType="TINYINT" property="add3flag" />
+    <result column="add4flag" jdbcType="TINYINT" property="add4flag" />
+    <result column="add5flag" jdbcType="TINYINT" property="add5flag" />
+    <result column="planwater" jdbcType="INTEGER" property="planwater" />
+    <result column="duanno" jdbcType="INTEGER" property="duanno" />
+    <result column="OrderNo" jdbcType="INTEGER" property="orderno" />
+    <result column="WaterBegin" jdbcType="INTEGER" property="waterbegin" />
+    <result column="WaterEnd" jdbcType="INTEGER" property="waterend" />
+    <result column="WaterAvg" jdbcType="INTEGER" property="wateravg" />
+    <result column="PriorWaterSum" jdbcType="INTEGER" property="priorwatersum" />
+    <result column="PriorWaterSumAdjusted" jdbcType="INTEGER" property="priorwatersumadjusted" />
+    <result column="WaterAmount0" jdbcType="INTEGER" property="wateramount0" />
+    <result column="WaterReal" jdbcType="INTEGER" property="waterreal" />
+    <result column="CurrentWaterSum" jdbcType="INTEGER" property="currentwatersum" />
+    <result column="CurrentWaterSumAdjusted" jdbcType="INTEGER" property="currentwatersumadjusted" />
+    <result column="WaterBranch10" jdbcType="INTEGER" property="waterbranch10" />
+    <result column="waterprj1" jdbcType="INTEGER" property="waterprj1" />
+    <result column="WaterBranch1Derated" jdbcType="INTEGER" property="waterbranch1derated" />
+    <result column="waterprj2" jdbcType="INTEGER" property="waterprj2" />
+    <result column="waterprj3" jdbcType="INTEGER" property="waterprj3" />
+    <result column="waterprj4" jdbcType="INTEGER" property="waterprj4" />
+    <result column="waterprj5" jdbcType="INTEGER" property="waterprj5" />
+    <result column="watercjh" jdbcType="INTEGER" property="watercjh" />
+    <result column="watercjhlv" jdbcType="SMALLINT" property="watercjhlv" />
+    <result column="prjFlag" jdbcType="TINYINT" property="prjflag" />
+    <result column="WaterFlag" jdbcType="SMALLINT" property="waterflag" />
+    <result column="audi" jdbcType="INTEGER" property="audi" />
+    <result column="sbkj" jdbcType="SMALLINT" property="sbkj" />
+    <result column="paytype" jdbcType="TINYINT" property="paytype" />
+    <result column="copy_id" jdbcType="INTEGER" property="copyId" />
+    <result column="audi_id" jdbcType="INTEGER" property="audiId" />
+    <result column="warn_flag" jdbcType="TINYINT" property="warnFlag" />
+    <result column="CopyRemark" jdbcType="VARCHAR" property="copyremark" />
+    <result column="PrintRemarkFlag" jdbcType="TINYINT" property="printremarkflag" />
+    <result column="ImprestFlag" jdbcType="TINYINT" property="imprestflag" />
+    <result column="payprj1" jdbcType="DECIMAL" property="payprj1" />
+    <result column="payprj2" jdbcType="DECIMAL" property="payprj2" />
+    <result column="payprj3" jdbcType="DECIMAL" property="payprj3" />
+    <result column="payprj4" jdbcType="DECIMAL" property="payprj4" />
+    <result column="payprj5" jdbcType="DECIMAL" property="payprj5" />
+    <result column="payadd1" jdbcType="DECIMAL" property="payadd1" />
+    <result column="payadd2" jdbcType="DECIMAL" property="payadd2" />
+    <result column="payadd3" jdbcType="DECIMAL" property="payadd3" />
+    <result column="payadd4" jdbcType="DECIMAL" property="payadd4" />
+    <result column="payadd5" jdbcType="DECIMAL" property="payadd5" />
+    <result column="paycjh" jdbcType="DECIMAL" property="paycjh" />
+    <result column="paytotal" jdbcType="DECIMAL" property="paytotal" />
+    <result column="payup" jdbcType="VARCHAR" property="payup" />
+    <result column="BasicAmt" jdbcType="INTEGER" property="basicamt" />
+    <result column="CopyAmt" jdbcType="INTEGER" property="copyamt" />
+    <result column="byamt" jdbcType="INTEGER" property="byamt" />
+    <result column="guamt" jdbcType="INTEGER" property="guamt" />
+    <result column="jbamt" jdbcType="INTEGER" property="jbamt" />
+    <result column="UpWaterReal" jdbcType="INTEGER" property="upwaterreal" />
+    <result column="PreRest" jdbcType="DECIMAL" property="prerest" />
+    <result column="NextRest" jdbcType="DECIMAL" property="nextrest" />
+    <result column="PayTotal0" jdbcType="DECIMAL" property="paytotal0" />
+    <result column="PayByImprest" jdbcType="DECIMAL" property="paybyimprest" />
+    <result column="ImprestYM" jdbcType="DECIMAL" property="imprestym" />
+    <result column="Water2" jdbcType="INTEGER" property="water2" />
+    <result column="Pay2" jdbcType="DECIMAL" property="pay2" />
+    <result column="Water3" jdbcType="INTEGER" property="water3" />
+    <result column="Pay3" jdbcType="DECIMAL" property="pay3" />
+    <result column="OldEnd" jdbcType="INTEGER" property="oldend" />
+    <result column="NewBegin" jdbcType="INTEGER" property="newbegin" />
+    <result column="Locked" jdbcType="INTEGER" property="locked" />
+    <result column="CreatedTime" jdbcType="TIMESTAMP" property="createdtime" />
+    <result column="ImprestBalance" jdbcType="DECIMAL" property="imprestbalance" />
+    <result column="LateMonths" jdbcType="INTEGER" property="latemonths" />
+    <result column="LateFee0" jdbcType="DECIMAL" property="latefee0" />
+    <result column="LateFee" jdbcType="DECIMAL" property="latefee" />
+  </resultMap>
+  <sql id="columns">
+    UserID, cYear, cMonth, Frequency, Population, Name, UserAddr, PrjID1, PrjID2, PrjID3, 
+    PrjID4, PrjID5, PrjLv, add1flag, add2flag, add3flag, add4flag, add5flag, planwater, 
+    duanno, OrderNo, WaterBegin, WaterEnd, WaterAvg, PriorWaterSum, PriorWaterSumAdjusted, 
+    WaterAmount0, WaterReal, CurrentWaterSum, CurrentWaterSumAdjusted, WaterBranch10, 
+    waterprj1, WaterBranch1Derated, waterprj2, waterprj3, waterprj4, waterprj5, watercjh, 
+    watercjhlv, prjFlag, WaterFlag, audi, sbkj, paytype, copy_id, audi_id, warn_flag, 
+    CopyRemark, PrintRemarkFlag, ImprestFlag, payprj1, payprj2, payprj3, payprj4, payprj5, 
+    payadd1, payadd2, payadd3, payadd4, payadd5, paycjh, paytotal, payup, BasicAmt, CopyAmt, 
+    byamt, guamt, jbamt, UpWaterReal, PreRest, NextRest, PayTotal0, PayByImprest, ImprestYM, 
+    Water2, Pay2, Water3, Pay3, OldEnd, NewBegin, Locked, CreatedTime, ImprestBalance, 
+    LateMonths, LateFee0, LateFee
+  </sql>
+  <!--通过主键查询-->
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="map">
+    select 
+    <include refid="columns" />
+    from input
+    where UserID = #{userid,jdbcType=INTEGER}
+  </select>
+  <!--通过主键删除-->
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from input
+    where UserID = #{userid,jdbcType=INTEGER}
+  </delete>
+  <!--新增-->
+  <insert id="insert" parameterType="com.yskj.mater.input.entity.Input">
+    insert into input (UserID, cYear, cMonth, 
+      Frequency, Population, Name, 
+      UserAddr, PrjID1, PrjID2, 
+      PrjID3, PrjID4, PrjID5, 
+      PrjLv, add1flag, add2flag, 
+      add3flag, add4flag, add5flag, 
+      planwater, duanno, OrderNo, 
+      WaterBegin, WaterEnd, WaterAvg, 
+      PriorWaterSum, PriorWaterSumAdjusted, WaterAmount0, 
+      WaterReal, CurrentWaterSum, CurrentWaterSumAdjusted, 
+      WaterBranch10, waterprj1, WaterBranch1Derated, 
+      waterprj2, waterprj3, waterprj4, 
+      waterprj5, watercjh, watercjhlv, 
+      prjFlag, WaterFlag, audi, 
+      sbkj, paytype, copy_id, 
+      audi_id, warn_flag, CopyRemark, 
+      PrintRemarkFlag, ImprestFlag, payprj1, 
+      payprj2, payprj3, payprj4, 
+      payprj5, payadd1, payadd2, 
+      payadd3, payadd4, payadd5, 
+      paycjh, paytotal, payup, 
+      BasicAmt, CopyAmt, byamt, 
+      guamt, jbamt, UpWaterReal, 
+      PreRest, NextRest, PayTotal0, 
+      PayByImprest, ImprestYM, Water2, 
+      Pay2, Water3, Pay3, 
+      OldEnd, NewBegin, Locked, 
+      CreatedTime, ImprestBalance, LateMonths, 
+      LateFee0, LateFee)
+    values (#{userid,jdbcType=INTEGER}, #{cyear,jdbcType=INTEGER}, #{cmonth,jdbcType=INTEGER}, 
+      #{frequency,jdbcType=INTEGER}, #{population,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
+      #{useraddr,jdbcType=VARCHAR}, #{prjid1,jdbcType=TINYINT}, #{prjid2,jdbcType=TINYINT}, 
+      #{prjid3,jdbcType=TINYINT}, #{prjid4,jdbcType=TINYINT}, #{prjid5,jdbcType=TINYINT}, 
+      #{prjlv,jdbcType=VARCHAR}, #{add1flag,jdbcType=TINYINT}, #{add2flag,jdbcType=TINYINT}, 
+      #{add3flag,jdbcType=TINYINT}, #{add4flag,jdbcType=TINYINT}, #{add5flag,jdbcType=TINYINT}, 
+      #{planwater,jdbcType=INTEGER}, #{duanno,jdbcType=INTEGER}, #{orderno,jdbcType=INTEGER}, 
+      #{waterbegin,jdbcType=INTEGER}, #{waterend,jdbcType=INTEGER}, #{wateravg,jdbcType=INTEGER}, 
+      #{priorwatersum,jdbcType=INTEGER}, #{priorwatersumadjusted,jdbcType=INTEGER}, #{wateramount0,jdbcType=INTEGER}, 
+      #{waterreal,jdbcType=INTEGER}, #{currentwatersum,jdbcType=INTEGER}, #{currentwatersumadjusted,jdbcType=INTEGER}, 
+      #{waterbranch10,jdbcType=INTEGER}, #{waterprj1,jdbcType=INTEGER}, #{waterbranch1derated,jdbcType=INTEGER}, 
+      #{waterprj2,jdbcType=INTEGER}, #{waterprj3,jdbcType=INTEGER}, #{waterprj4,jdbcType=INTEGER}, 
+      #{waterprj5,jdbcType=INTEGER}, #{watercjh,jdbcType=INTEGER}, #{watercjhlv,jdbcType=SMALLINT}, 
+      #{prjflag,jdbcType=TINYINT}, #{waterflag,jdbcType=SMALLINT}, #{audi,jdbcType=INTEGER}, 
+      #{sbkj,jdbcType=SMALLINT}, #{paytype,jdbcType=TINYINT}, #{copyId,jdbcType=INTEGER}, 
+      #{audiId,jdbcType=INTEGER}, #{warnFlag,jdbcType=TINYINT}, #{copyremark,jdbcType=VARCHAR}, 
+      #{printremarkflag,jdbcType=TINYINT}, #{imprestflag,jdbcType=TINYINT}, #{payprj1,jdbcType=DECIMAL}, 
+      #{payprj2,jdbcType=DECIMAL}, #{payprj3,jdbcType=DECIMAL}, #{payprj4,jdbcType=DECIMAL}, 
+      #{payprj5,jdbcType=DECIMAL}, #{payadd1,jdbcType=DECIMAL}, #{payadd2,jdbcType=DECIMAL}, 
+      #{payadd3,jdbcType=DECIMAL}, #{payadd4,jdbcType=DECIMAL}, #{payadd5,jdbcType=DECIMAL}, 
+      #{paycjh,jdbcType=DECIMAL}, #{paytotal,jdbcType=DECIMAL}, #{payup,jdbcType=VARCHAR}, 
+      #{basicamt,jdbcType=INTEGER}, #{copyamt,jdbcType=INTEGER}, #{byamt,jdbcType=INTEGER}, 
+      #{guamt,jdbcType=INTEGER}, #{jbamt,jdbcType=INTEGER}, #{upwaterreal,jdbcType=INTEGER}, 
+      #{prerest,jdbcType=DECIMAL}, #{nextrest,jdbcType=DECIMAL}, #{paytotal0,jdbcType=DECIMAL}, 
+      #{paybyimprest,jdbcType=DECIMAL}, #{imprestym,jdbcType=DECIMAL}, #{water2,jdbcType=INTEGER}, 
+      #{pay2,jdbcType=DECIMAL}, #{water3,jdbcType=INTEGER}, #{pay3,jdbcType=DECIMAL}, 
+      #{oldend,jdbcType=INTEGER}, #{newbegin,jdbcType=INTEGER}, #{locked,jdbcType=INTEGER}, 
+      #{createdtime,jdbcType=TIMESTAMP}, #{imprestbalance,jdbcType=DECIMAL}, #{latemonths,jdbcType=INTEGER}, 
+      #{latefee0,jdbcType=DECIMAL}, #{latefee,jdbcType=DECIMAL})
+  </insert>
+  <!--通过主键修改-->
+  <update id="updateByPrimaryKey" parameterType="com.yskj.mater.input.entity.Input">
+    update input
+    set cYear = #{cyear,jdbcType=INTEGER},
+      cMonth = #{cmonth,jdbcType=INTEGER},
+      Frequency = #{frequency,jdbcType=INTEGER},
+      Population = #{population,jdbcType=INTEGER},
+      Name = #{name,jdbcType=VARCHAR},
+      UserAddr = #{useraddr,jdbcType=VARCHAR},
+      PrjID1 = #{prjid1,jdbcType=TINYINT},
+      PrjID2 = #{prjid2,jdbcType=TINYINT},
+      PrjID3 = #{prjid3,jdbcType=TINYINT},
+      PrjID4 = #{prjid4,jdbcType=TINYINT},
+      PrjID5 = #{prjid5,jdbcType=TINYINT},
+      PrjLv = #{prjlv,jdbcType=VARCHAR},
+      add1flag = #{add1flag,jdbcType=TINYINT},
+      add2flag = #{add2flag,jdbcType=TINYINT},
+      add3flag = #{add3flag,jdbcType=TINYINT},
+      add4flag = #{add4flag,jdbcType=TINYINT},
+      add5flag = #{add5flag,jdbcType=TINYINT},
+      planwater = #{planwater,jdbcType=INTEGER},
+      duanno = #{duanno,jdbcType=INTEGER},
+      OrderNo = #{orderno,jdbcType=INTEGER},
+      WaterBegin = #{waterbegin,jdbcType=INTEGER},
+      WaterEnd = #{waterend,jdbcType=INTEGER},
+      WaterAvg = #{wateravg,jdbcType=INTEGER},
+      PriorWaterSum = #{priorwatersum,jdbcType=INTEGER},
+      PriorWaterSumAdjusted = #{priorwatersumadjusted,jdbcType=INTEGER},
+      WaterAmount0 = #{wateramount0,jdbcType=INTEGER},
+      WaterReal = #{waterreal,jdbcType=INTEGER},
+      CurrentWaterSum = #{currentwatersum,jdbcType=INTEGER},
+      CurrentWaterSumAdjusted = #{currentwatersumadjusted,jdbcType=INTEGER},
+      WaterBranch10 = #{waterbranch10,jdbcType=INTEGER},
+      waterprj1 = #{waterprj1,jdbcType=INTEGER},
+      WaterBranch1Derated = #{waterbranch1derated,jdbcType=INTEGER},
+      waterprj2 = #{waterprj2,jdbcType=INTEGER},
+      waterprj3 = #{waterprj3,jdbcType=INTEGER},
+      waterprj4 = #{waterprj4,jdbcType=INTEGER},
+      waterprj5 = #{waterprj5,jdbcType=INTEGER},
+      watercjh = #{watercjh,jdbcType=INTEGER},
+      watercjhlv = #{watercjhlv,jdbcType=SMALLINT},
+      prjFlag = #{prjflag,jdbcType=TINYINT},
+      WaterFlag = #{waterflag,jdbcType=SMALLINT},
+      audi = #{audi,jdbcType=INTEGER},
+      sbkj = #{sbkj,jdbcType=SMALLINT},
+      paytype = #{paytype,jdbcType=TINYINT},
+      copy_id = #{copyId,jdbcType=INTEGER},
+      audi_id = #{audiId,jdbcType=INTEGER},
+      warn_flag = #{warnFlag,jdbcType=TINYINT},
+      CopyRemark = #{copyremark,jdbcType=VARCHAR},
+      PrintRemarkFlag = #{printremarkflag,jdbcType=TINYINT},
+      ImprestFlag = #{imprestflag,jdbcType=TINYINT},
+      payprj1 = #{payprj1,jdbcType=DECIMAL},
+      payprj2 = #{payprj2,jdbcType=DECIMAL},
+      payprj3 = #{payprj3,jdbcType=DECIMAL},
+      payprj4 = #{payprj4,jdbcType=DECIMAL},
+      payprj5 = #{payprj5,jdbcType=DECIMAL},
+      payadd1 = #{payadd1,jdbcType=DECIMAL},
+      payadd2 = #{payadd2,jdbcType=DECIMAL},
+      payadd3 = #{payadd3,jdbcType=DECIMAL},
+      payadd4 = #{payadd4,jdbcType=DECIMAL},
+      payadd5 = #{payadd5,jdbcType=DECIMAL},
+      paycjh = #{paycjh,jdbcType=DECIMAL},
+      paytotal = #{paytotal,jdbcType=DECIMAL},
+      payup = #{payup,jdbcType=VARCHAR},
+      BasicAmt = #{basicamt,jdbcType=INTEGER},
+      CopyAmt = #{copyamt,jdbcType=INTEGER},
+      byamt = #{byamt,jdbcType=INTEGER},
+      guamt = #{guamt,jdbcType=INTEGER},
+      jbamt = #{jbamt,jdbcType=INTEGER},
+      UpWaterReal = #{upwaterreal,jdbcType=INTEGER},
+      PreRest = #{prerest,jdbcType=DECIMAL},
+      NextRest = #{nextrest,jdbcType=DECIMAL},
+      PayTotal0 = #{paytotal0,jdbcType=DECIMAL},
+      PayByImprest = #{paybyimprest,jdbcType=DECIMAL},
+      ImprestYM = #{imprestym,jdbcType=DECIMAL},
+      Water2 = #{water2,jdbcType=INTEGER},
+      Pay2 = #{pay2,jdbcType=DECIMAL},
+      Water3 = #{water3,jdbcType=INTEGER},
+      Pay3 = #{pay3,jdbcType=DECIMAL},
+      OldEnd = #{oldend,jdbcType=INTEGER},
+      NewBegin = #{newbegin,jdbcType=INTEGER},
+      Locked = #{locked,jdbcType=INTEGER},
+      CreatedTime = #{createdtime,jdbcType=TIMESTAMP},
+      ImprestBalance = #{imprestbalance,jdbcType=DECIMAL},
+      LateMonths = #{latemonths,jdbcType=INTEGER},
+      LateFee0 = #{latefee0,jdbcType=DECIMAL},
+      LateFee = #{latefee,jdbcType=DECIMAL}
+    where UserID = #{userid,jdbcType=INTEGER}
+  </update>
+</mapper>
